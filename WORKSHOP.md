@@ -61,12 +61,12 @@ The first step is to assess the sample Java application `asset-manager`. The ass
 
 ## Upgrade Runtime & Frameworks
 
-1. In the **Java Upgrade** table at the bottom of the **Issues** tab, click the **Run Task** button of the first entry **Java Version Upgrade**.
+1. In the modernization panel's **QuickStart**, select **Upgrade Java Runtime & Frameworks** in VS Code, or **Upgrade Runtime & Frameworks** in IntelliJ IDEA.
+2. Select **Java 21** and **Spring Boot 3.x** (for example, 3.5.x). Review the generated plan before confirming execution.
+3. Keep existing storage and messaging integrations; do not include unrelated cloud findings through **Create Plan**.
+4. Review edits and verify both modules with Maven using JDK 21.
 
-    ![Java Upgrade](doc-media/java-upgrade.png)
-1. After clicking the **Run Task** button, the Copilot Chat panel will open with Agent Mode. The agent will check out a new branch and start upgrading the JDK version and Spring/Spring Boot framework. Click **Allow** for any requests from the agent.
-
-> Note: The upgrading tool also supports upgrading to JDK 25 (the latest LTS version). To do this, click on the generated chat message, edit the target Java version to 25, and then click **Send** to apply the change.
+The current UI does not require a **Run Task** button on each assessment issue. See [Step 3: Upgrade Runtime & Frameworks](workshop/03-upgrade.md) for the current workflow, Agent-mode prompt alternative, and checkpoints.
 
 ## Expose health endpoints using Custom Skills
 
