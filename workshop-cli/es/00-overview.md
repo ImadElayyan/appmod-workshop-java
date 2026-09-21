@@ -10,19 +10,19 @@ Este taller te guiará a través del proceso de modernización de una aplicació
 La modernización transformará tu aplicación de tecnologías obsoletas a una solución moderna. Esto incluye:
 - Actualizar de **Java 8 a Java 21**
 - Migrar de **Spring Boot 2.x a 3.x**
-- Agregar **health check endpoints**
+- Revisar los hallazgos y registrar qué se migró, se pospuso o quedó fuera del alcance
 - **Containerizar** las aplicaciones
 
 ## Estimaciones de Tiempo
 
-El taller completo toma aproximadamente **35 minutos** para completarse:
+La duración depende de los hallazgos seleccionados. El tiempo anterior de endpoints de salud ya no aplica. La revisión del plan, los cambios de código y las pruebas con Azure son actividades distintas; no se promete una duración total fija.
 
 | Paso | Duración |
 |------|----------|
 | Prerrequisitos y Configuración | ~5 min |
 | Iniciar Copilot CLI y Agregar MCP Server | ~5 min |
 | Actualizar Runtime y Frameworks | ~10 min |
-| Exponer Health Endpoints | ~10 min |
+| Hallazgos de migración | Variable |
 | Containerizar Aplicaciones | ~5 min |
 
 ## Pasos del Taller
@@ -32,7 +32,7 @@ El taller completo toma aproximadamente **35 minutos** para completarse:
 | 01 | [Prerrequisitos y Configuración](01-prerequisites.md) | Instalar herramientas y clonar el repositorio |
 | 02 | [Iniciar Copilot CLI](02-assess.md) | Iniciar Copilot CLI y agregar el MCP server de modernización |
 | 03 | [Actualizar Runtime y Frameworks](03-upgrade.md) | Actualizar las versiones de Java y Spring Boot |
-| 04 | [Health Endpoints](04-health-endpoints.md) | Exponer health endpoints usando un prompt en lenguaje natural |
+| 04 | [Hallazgos de migración](04-cloud-findings.md) | Planificar migraciones de almacenamiento, mensajería, bases de datos e identidad |
 | 05 | [Containerizar Aplicaciones](05-containerize.md) | Preparar tu aplicación para el despliegue en la nube |
 
 ## Lo Que Aprenderás

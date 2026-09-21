@@ -41,7 +41,7 @@ Você concluiu o workshop de Modernização de Aplicações! Aqui está o que vo
 
 - ✅ **Avaliou** a aplicação Java legada para entender as necessidades de modernização
 - ✅ **Atualizou** do Java 8 → 21 e Spring Boot 2.x → 3.x
-- ✅ **Adicionou endpoints de saúde** usando habilidades personalizadas e Spring Boot Actuator
+- Revisar as descobertas e registrar o que foi migrado, adiado ou deixado fora do escopo
 - ✅ **Conteinerizou** a aplicação para implantação na nuvem
 
 ### Próximos Passos

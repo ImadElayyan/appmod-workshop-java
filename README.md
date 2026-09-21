@@ -2,10 +2,10 @@
 
 # Asset Manager
 
-This document serves as a comprehensive workshop guide that will walk you through the process of modernizing a Java application using GitHub Copilot app modernization. The workshop covers assessment, Java/framework upgrades, health endpoints, and containerization.
+This workshop uses GitHub Copilot to assess and upgrade a Java application, plan focused cloud migrations, and containerize its web and worker modules.
 
 **What the modernization Process Will Do:**
-The modernization will transform your application from the outdated technologies to a modern solution. This includes upgrading from Java 8 to Java 21, migrating from Spring Boot 2.x to 3.x, adding health checks, and containerizing the applications.
+Upgrade Java 8 to Java 21 and Spring Boot 2.x to 3.x. Review storage, messaging, database and identity findings separately; execute only the migrations you choose and validate.
 
 ## Table of Contents
 
@@ -24,10 +24,10 @@ The [main](https://github.com/copilot-dev-days/appmod-workshop-java/tree/main) b
 In this workshop, you will use the **GitHub Copilot app modernization** extension to assess, upgrade, and containerize the project.
 
 **Time Estimates:**
-The complete workshop takes approximately **35 minutes** to complete. Here's the breakdown for each major step:
+Duration varies with the selected findings. The former health-endpoint timing no longer applies. Plan review, code changes and Azure integration testing are separate activities; no fixed total is promised for this revised workshop.
 - **Assess Your Java Application**: ~5 minutes
 - **Upgrade Runtime & Frameworks**: ~10 minutes
-- **Expose Health Endpoints**: ~15 minutes
+- **Cloud Migration Findings**: Variable
 - **Containerize Applications**: ~5 minutes
 
 
@@ -142,7 +142,6 @@ The workshop covers:
 - Installing GitHub Copilot app modernization
 - Assessing your Java application
 - Upgrading runtime & frameworks (Java 8 → 21, Spring Boot 2.x → 3.x)
-- Exposing health endpoints using custom skills
+- Plan focused migrations for storage, messaging, databases and identity
 - Containerizing applications
-
 

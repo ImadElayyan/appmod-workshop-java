@@ -41,7 +41,7 @@ El proceso de containerización:
 
 - ✅ **Evaluaste** la aplicación Java heredada para comprender las necesidades de modernización
 - ✅ **Actualizaste** de Java 8 → 21 y Spring Boot 2.x → 3.x
-- ✅ **Agregaste health endpoints** usando custom skills y Spring Boot Actuator
+- Revisar los hallazgos y registrar qué se migró, se pospuso o quedó fuera del alcance
 - ✅ **Containerizaste** la aplicación para el despliegue en la nube
 
 ### ¿Qué Sigue?

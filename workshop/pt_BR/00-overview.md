@@ -10,19 +10,19 @@ Este workshop guiará você pelo processo de modernização de uma aplicação J
 A modernização transformará sua aplicação de tecnologias obsoletas para uma solução moderna. Isso inclui:
 - Atualização do **Java 8 para Java 21**
 - Migração do **Spring Boot 2.x para 3.x**
-- Adição de **endpoints de verificação de saúde (health check)**
+- Revisar as descobertas e registrar o que foi migrado, adiado ou deixado fora do escopo
 - **Conteinerização** das aplicações
 
 ## Estimativas de Tempo
 
-O workshop completo leva aproximadamente **35 minutos** para ser concluído:
+A duração depende das descobertas selecionadas. O tempo anterior de endpoints de saúde não se aplica mais. Revisão do plano, alterações de código e testes com Azure são atividades distintas; não há duração total fixa prometida.
 
 | Etapa | Duração |
 |-------|---------|
 | Pré-requisitos e Configuração | ~5 min |
 | Avaliar sua Aplicação Java | ~5 min |
 | Atualizar Runtime e Frameworks | ~10 min |
-| Expor Endpoints de Saúde | ~10 min |
+| Descobertas de migração | Variável |
 | Conteinerizar Aplicações | ~5 min |
 
 ## Etapas do Workshop
@@ -32,12 +32,12 @@ O workshop completo leva aproximadamente **35 minutos** para ser concluído:
 | 01 | [Pré-requisitos e Configuração](01-prerequisites.md) | Instalar ferramentas e clonar o repositório |
 | 02 | [Avaliar sua Aplicação](02-assess.md) | Executar a avaliação para analisar sua aplicação |
 | 03 | [Atualizar Runtime e Frameworks](03-upgrade.md) | Atualizar versões do Java e Spring Boot |
-| 04 | [Endpoints de Saúde](04-health-endpoints.md) | Expor endpoints de saúde usando habilidades personalizadas |
+| 04 | [Descobertas de migração](04-cloud-findings.md) | Planejar migrações de armazenamento, mensageria, bancos de dados e identidade |
 | 05 | [Conteinerizar Aplicações](05-containerize.md) | Preparar sua aplicação para implantação na nuvem |
 
 ## O que Você Aprenderá
 
 - Como usar o **GitHub Copilot app modernization** para avaliar aplicações Java legadas
 - Como atualizar versões do Java e frameworks Spring Boot com assistência de IA
-- Como criar **habilidades personalizadas (custom skills)** para necessidades específicas de modernização
+- Planejar migrações de armazenamento, mensageria, bancos de dados e identidade
 - Como conteinerizar aplicações Java para implantação na nuvem

@@ -37,7 +37,7 @@ You've completed the App Modernization workshop using the Copilot CLI! Here's wh
 
 - ✅ **Set up** Copilot CLI with the modernization MCP server
 - ✅ **Upgraded** from Java 8 → 21 and Spring Boot 2.x → 3.x
-- ✅ **Added health endpoints** using Spring Boot Actuator
+- Review cloud findings and record what was migrated, deferred or left out of scope
 - ✅ **Containerized** the application for cloud deployment
 
 ### What's Next?

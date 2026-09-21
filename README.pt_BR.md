@@ -1,10 +1,10 @@
 <!-- l10n-sync: source-file="README.md" -->
 # Asset Manager
 
-Este documento serve como um guia abrangente de workshop que irá orientá-lo no processo de modernização de uma aplicação Java usando o GitHub Copilot app modernization. O workshop abrange avaliação, atualizações de Java/frameworks, endpoints de saúde e conteinerização.
+Este workshop usa GitHub Copilot para avaliar e atualizar uma aplicação Java, planejar migrações delimitadas e conteinerizar os módulos web e worker.
 
 **O que o Processo de Modernização Fará:**
-A modernização transformará sua aplicação das tecnologias desatualizadas para uma solução moderna. Isso inclui a atualização do Java 8 para o Java 21, a migração do Spring Boot 2.x para o 3.x, a adição de health checks e a conteinerização das aplicações.
+Atualize Java 8 para Java 21 e Spring Boot 2.x para 3.x. Revise separadamente as descobertas de armazenamento, mensageria, banco de dados e identidade; execute apenas as migrações escolhidas e validadas.
 
 ## Índice
 
@@ -23,10 +23,10 @@ O branch [main](https://github.com/copilot-dev-days/appmod-workshop-java/tree/ma
 Neste workshop, você usará a extensão **GitHub Copilot app modernization** para avaliar, atualizar e conteinerizar o projeto.
 
 **Estimativas de Tempo:**
-O workshop completo leva aproximadamente **35 minutos** para ser concluído. Aqui está a divisão para cada etapa principal:
+A duração depende das descobertas selecionadas. O tempo anterior de endpoints de saúde não se aplica mais. Revisão do plano, alterações de código e testes com Azure são atividades distintas; não há duração total fixa prometida.
 - **Avaliar Sua Aplicação Java**: ~5 minutos
 - **Atualizar Runtime e Frameworks**: ~10 minutos
-- **Expor Endpoints de Saúde**: ~15 minutos
+- **Descobertas de migração**: Variável
 - **Conteinerizar Aplicações**: ~5 minutos
 
 
@@ -141,5 +141,5 @@ O workshop abrange:
 - Instalação do GitHub Copilot app modernization
 - Avaliação da sua aplicação Java
 - Atualização de runtime e frameworks (Java 8 → 21, Spring Boot 2.x → 3.x)
-- Exposição de endpoints de saúde usando custom skills
+- Planejar migrações de armazenamento, mensageria, bancos de dados e identidade
 - Conteinerização de aplicações

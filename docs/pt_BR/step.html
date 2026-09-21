@@ -63,7 +63,7 @@
             { id: '01-prerequisites', file: 'workshop/pt_BR/01-prerequisites.md', title: 'Pré-requisitos e Configuração', number: '01' },
             { id: '02-assess', file: 'workshop/pt_BR/02-assess.md', title: 'Avalie Sua Aplicação', number: '02' },
             { id: '03-upgrade', file: 'workshop/pt_BR/03-upgrade.md', title: 'Atualizar Runtime e Frameworks', number: '03' },
-            { id: '04-health-endpoints', file: 'workshop/pt_BR/04-health-endpoints.md', title: 'Health Endpoints', number: '04' },
+            { id: '04-cloud-findings', file: 'workshop/pt_BR/04-cloud-findings.md', title: 'Descobertas de migração', number: '04' },
             { id: '05-containerize', file: 'workshop/pt_BR/05-containerize.md', title: 'Containerizar Aplicações', number: '05' },
             { id: 'prompts', file: 'PROMPTS.pt_BR.md', title: 'Guia de Prompts do Copilot', number: '📖' },
         ];
@@ -144,7 +144,9 @@
         async function loadStep(stepId) {
             const step = steps.find(s => s.id === stepId);
             if (!step) {
-                document.getElementById('markdownContent').innerHTML = '<p>Etapa não encontrada.</p>';
+                document.getElementById('markdownContent').innerHTML = '<div class="markdown"><h1>Etapa indisponível</h1><p>Esta etapa não faz parte do workshop atual. <a href="index.html">Voltar ao workshop</a>.</p></div>';
+                document.getElementById('prevBtn').disabled = true;
+                document.getElementById('nextBtn').disabled = true;
                 return;
             }
             currentIndex = steps.indexOf(step);

@@ -40,7 +40,7 @@ You've completed the App Modernization workshop! Here's what you accomplished:
 
 - ✅ **Assessed** the legacy Java application to understand modernization needs
 - ✅ **Upgraded** from Java 8 → 21 and Spring Boot 2.x → 3.x
-- ✅ **Added health endpoints** using custom skills and Spring Boot Actuator
+- Review cloud findings and record what was migrated, deferred or left out of scope
 - ✅ **Containerized** the application for cloud deployment
 
 ### What's Next?

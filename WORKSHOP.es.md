@@ -9,7 +9,7 @@ Las siguientes secciones lo guían a través del proceso de modernización de la
 - [Instalar GitHub Copilot app modernization](#instalar-github-copilot-app-modernization)
 - [Evaluar Su Aplicación Java](#evaluar-su-aplicación-java)
 - [Actualizar Runtime y Frameworks](#actualizar-runtime-y-frameworks)
-- [Exponer endpoints de salud usando Custom Skills](#exponer-endpoints-de-salud-usando-custom-skills)
+- [Resolver hallazgos de migración a la nube](workshop/es/04-cloud-findings.md)
 - [Contenedorizar Aplicaciones](#contenedorizar-aplicaciones)
 
 ## Prerrequisitos
@@ -69,31 +69,13 @@ El primer paso es evaluar la aplicación Java de ejemplo `asset-manager`. La eva
 
 La interfaz actual no requiere **Run Task** en cada problema. Consulte el [Paso 3](workshop/es/03-upgrade.md) para ver el flujo actualizado, el prompt alternativo y los puntos de verificación.
 
-## Exponer endpoints de salud usando Custom Skills
+## Resolver hallazgos de migración a la nube
 
-En esta sección, utilizará custom skills para exponer endpoints de salud para sus aplicaciones en lugar de escribir código usted mismo. Los siguientes pasos demuestran cómo crear una custom skill con referencias y prompts adecuados.
-
-> Nota: Las custom skills (My Skills) no son compatibles con el plugin de IntelliJ IDEA. Si está usando IntelliJ IDEA, puede omitir esta sección.
-
-1. En la barra lateral de Actividades, abra el panel de la extensión **GitHub Copilot app modernization**. Pase el cursor sobre la sección **TASKS** y luego seleccione **Create a Custom Skill**.
-
-   ![Create Custom Skill](doc-media/create-formula-from-source-control.png)
-1. Se abrirá un formulario **Create a Skill** con los siguientes campos. Complételos como se muestra a continuación:
-   - **Skill Name**: `expose-health-endpoint`
-   - **Skill Description**: `This skill helps add Spring Boot Actuator health endpoints for Azure Container Apps deployment readiness.`
-   - **Skill Content**: `You are a Spring Boot developer assistant, follow the Spring Boot Actuator documentation to add basic health endpoints for Azure Container Apps deployment.`
-
-1. Haga clic en **Add Resources** para agregar la documentación oficial de Spring Boot Actuator como recurso. Pegue el siguiente enlace: `https://docs.spring.io/spring-boot/reference/actuator/endpoints.html`.
-
-   ![Create a Skill form](doc-media/health-endpoint-task.png)
-1. Haga clic en **Save** para crear la skill. Su custom skill ahora aparece en la sección **TASKS** > **My Skills**.
-1. Haga clic en **Run** para ejecutarla.
-1. La ventana de Copilot chat se abre en Agent Mode y genera automáticamente el plan de migración, crea una nueva rama, realiza cambios en el código y ejecuta el ciclo de validación y corrección. Haga clic en **Allow** para cualquier solicitud de llamada de herramienta del agente.
-1. Revise los cambios de código propuestos y haga clic en **Keep** para aplicarlos.
+Planificar migraciones de almacenamiento, mensajería, bases de datos e identidad. [Resolver hallazgos de migración a la nube](workshop/es/04-cloud-findings.md).
 
 ## Contenedorizar Aplicaciones
 
-Ahora que ha completado los pasos de actualización y endpoint de salud, el siguiente paso es preparar su aplicación para la implementación en la nube contenedorizando los módulos web y worker. En esta sección, utilizará **Containerization Tasks** para contenedorizar sus aplicaciones.
+Después de revisar los hallazgos seleccionados, contenedorice la aplicación. Un plan revisado no demuestra que la migración esté completa; registre por separado el trabajo de integración pendiente.
 
 1. En la barra lateral de Actividades, abra el panel de la extensión **GitHub Copilot app modernization**. En la sección **TASKS**, expanda **Common Tasks** > **Containerize Tasks** y haga clic en el botón de ejecución para **Containerize Application**.
   

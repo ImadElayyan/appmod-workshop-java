@@ -63,7 +63,7 @@
             { id: '01-prerequisites', file: 'workshop/01-prerequisites.md', title: 'Prerequisites & Setup', number: '01' },
             { id: '02-assess', file: 'workshop/02-assess.md', title: 'Assess Your Application', number: '02' },
             { id: '03-upgrade', file: 'workshop/03-upgrade.md', title: 'Upgrade Runtime & Frameworks', number: '03' },
-            { id: '04-health-endpoints', file: 'workshop/04-health-endpoints.md', title: 'Health Endpoints', number: '04' },
+            { id: '04-cloud-findings', file: 'workshop/04-cloud-findings.md', title: 'Cloud Migration Findings', number: '04' },
             { id: '05-containerize', file: 'workshop/05-containerize.md', title: 'Containerize Applications', number: '05' },
             { id: 'prompts', file: 'PROMPTS.md', title: 'Copilot Prompts Guide', number: '📖' },
         ];
@@ -73,7 +73,7 @@
             { id: '01-prerequisites', file: 'workshop-cli/01-prerequisites.md', title: 'Prerequisites & Setup', number: '01' },
             { id: '02-assess', file: 'workshop-cli/02-assess.md', title: 'Start Copilot CLI', number: '02' },
             { id: '03-upgrade', file: 'workshop-cli/03-upgrade.md', title: 'Upgrade Runtime & Frameworks', number: '03' },
-            { id: '04-health-endpoints', file: 'workshop-cli/04-health-endpoints.md', title: 'Health Endpoints', number: '04' },
+            { id: '04-cloud-findings', file: 'workshop-cli/04-cloud-findings.md', title: 'Cloud Migration Findings', number: '04' },
             { id: '05-containerize', file: 'workshop-cli/05-containerize.md', title: 'Containerize Applications', number: '05' },
         ];
 
@@ -148,13 +148,20 @@
                 return match;
             });
 
+            md = md.replace(/\[([^\]]+)\]\((?:\.\/)?(\d+-[^)]+)\.md\)/g, function(match, text, stepId) {
+                return steps.some(s => s.id === stepId)
+                    ? `[${text}](step.html?${variantParam}step=${stepId})`
+                    : match;
+            });
             return md;
         }
 
         async function loadStep(stepId) {
             const step = steps.find(s => s.id === stepId);
             if (!step) {
-                document.getElementById('markdownContent').innerHTML = '<p>Step not found.</p>';
+                document.getElementById('markdownContent').innerHTML = '<div class="markdown"><h1>Step unavailable</h1><p>This step is not part of the current workshop. <a href="index.html">Return to the workshop</a>.</p></div>';
+                document.getElementById('prevBtn').disabled = true;
+                document.getElementById('nextBtn').disabled = true;
                 return;
             }
             currentIndex = steps.indexOf(step);

@@ -63,7 +63,7 @@
             { id: '01-prerequisites', file: 'workshop/es/01-prerequisites.md', title: 'Requisitos Previos y Configuración', number: '01' },
             { id: '02-assess', file: 'workshop/es/02-assess.md', title: 'Evalúa Tu Aplicación', number: '02' },
             { id: '03-upgrade', file: 'workshop/es/03-upgrade.md', title: 'Actualizar Runtime y Frameworks', number: '03' },
-            { id: '04-health-endpoints', file: 'workshop/es/04-health-endpoints.md', title: 'Health Endpoints', number: '04' },
+            { id: '04-cloud-findings', file: 'workshop/es/04-cloud-findings.md', title: 'Hallazgos de migración', number: '04' },
             { id: '05-containerize', file: 'workshop/es/05-containerize.md', title: 'Containerizar Aplicaciones', number: '05' },
             { id: 'prompts', file: 'PROMPTS.es.md', title: 'Guía de Prompts de Copilot', number: '📖' },
         ];
@@ -144,7 +144,9 @@
         async function loadStep(stepId) {
             const step = steps.find(s => s.id === stepId);
             if (!step) {
-                document.getElementById('markdownContent').innerHTML = '<p>Paso no encontrado.</p>';
+                document.getElementById('markdownContent').innerHTML = '<div class="markdown"><h1>Paso no disponible</h1><p>Este paso no forma parte del taller actual. <a href="index.html">Volver al taller</a>.</p></div>';
+                document.getElementById('prevBtn').disabled = true;
+                document.getElementById('nextBtn').disabled = true;
                 return;
             }
             currentIndex = steps.indexOf(step);

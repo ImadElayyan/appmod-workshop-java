@@ -1,10 +1,10 @@
 <!-- l10n-sync: source-file="README.md" -->
 # Asset Manager
 
-Este documento sirve como una guía completa de taller que lo guiará a través del proceso de modernización de una aplicación Java utilizando GitHub Copilot app modernization. El taller cubre evaluación, actualizaciones de Java/frameworks, endpoints de salud y contenedorización.
+Este taller usa GitHub Copilot para evaluar y actualizar una aplicación Java, planificar migraciones acotadas y contenedorizar los módulos web y worker.
 
 **Lo que hará el Proceso de Modernización:**
-La modernización transformará su aplicación de las tecnologías obsoletas a una solución moderna. Esto incluye la actualización de Java 8 a Java 21, la migración de Spring Boot 2.x a 3.x, la adición de health checks y la contenedorización de las aplicaciones.
+Actualice Java 8 a Java 21 y Spring Boot 2.x a 3.x. Revise por separado los hallazgos de almacenamiento, mensajería, base de datos e identidad; ejecute solo las migraciones elegidas y validadas.
 
 ## Tabla de Contenidos
 
@@ -23,10 +23,10 @@ La rama [main](https://github.com/copilot-dev-days/appmod-workshop-java/tree/mai
 En este taller, utilizará la extensión **GitHub Copilot app modernization** para evaluar, actualizar y contenedorizar el proyecto.
 
 **Estimaciones de Tiempo:**
-El taller completo toma aproximadamente **35 minutos** para completarse. Aquí está el desglose para cada paso principal:
+La duración depende de los hallazgos seleccionados. El tiempo anterior de endpoints de salud ya no aplica. La revisión del plan, los cambios de código y las pruebas con Azure son actividades distintas; no se promete una duración total fija.
 - **Evaluar Su Aplicación Java**: ~5 minutos
 - **Actualizar Runtime y Frameworks**: ~10 minutos
-- **Exponer Endpoints de Salud**: ~15 minutos
+- **Hallazgos de migración**: Variable
 - **Contenedorizar Aplicaciones**: ~5 minutos
 
 
@@ -141,5 +141,5 @@ El taller cubre:
 - Instalación de GitHub Copilot app modernization
 - Evaluación de su aplicación Java
 - Actualización de runtime y frameworks (Java 8 → 21, Spring Boot 2.x → 3.x)
-- Exposición de endpoints de salud usando custom skills
+- Planificar migraciones de almacenamiento, mensajería, bases de datos e identidad
 - Contenedorización de aplicaciones
